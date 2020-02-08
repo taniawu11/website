@@ -7,24 +7,92 @@
   </head>
   <body>
     <ul id="navbar">
-<li id="logo"><a href="index.html"><img src=""></a></li>
-<li class="nav" id="solutions"><a href="solutions.html" style="text-decoration: none; color: #ed9e3e;
-}">solutions</a></li>
-<li class="nav"><a href="effects.html" style="text-decoration: none;  color: #6ccc82;">effects</a></li>
-<li class="nav"><a href="evidence.html" style="text-decoration: none;  color: #6ccc82;">evidence</a></li>
-<li class="nav"><a href="causes.html" style="text-decoration: none;  color: #6ccc82;">causes</a></li>
+<li><a href="index.html" id="logo">logo</a></li>
+<li><a href="solutions.html" class="nav" id="solutions">solutions</a></li>
+<li><a href="effects.html" class="nav">effects</a></li>
+<li><a href="evidence.html" class="nav">evidence</a></li>
+<li><a href="causes.html" class="nav">causes</a></li>
 </ul>
 
-<h2 id="homepagetxt">our world is dying, and it needs YOUR help!</h2>
+<div id="homepage">
+<h2 id="homepagetxt" style="margin-top:100px;">our world is dying, and it needs YOUR help!</h2>
+<img src="mountain.jpg" id="homepageimg" style="height:500px;width:800px;">
+</div>
 
-<img src="mountain.jpg" id="homepageimg">
 
-<h4>if everyone in the world lived the same lifestyle as people in the US, it would take 5 Earths to provide enough resources for all of us!</h4>
+<h3 class="dyk" style="font-size:30px;">did you know?</h3>
 
-<img src="mist.jpg" class="rightimg" style="width:300px;height:200px;">
+<p class="dyk">click through these facts about global warming - did you know these?</p>
+
+  <div class="slideshow">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="4.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="5.png" style="width:100%">
+    </div>
+
+  <div style="text-align:center">
+    <button id="previous" onclick="plusSlides(-1)">❮</button>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <button id="next" onclick="plusSlides(1)">❯</button>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<img src="mist.jpg">
 
 <h3>learn more about global warming through this website, and most importantly, learn how to combat it!</h3>
-<h3>did you know?</h3>
 
   </body>
 </html>
